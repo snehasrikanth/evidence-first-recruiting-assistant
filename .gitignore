@@ -1,0 +1,11 @@
+# Public concept repository: publish only the approved overview and figures.
+*
+
+!.gitignore
+!README.md
+
+!assets/
+!assets/publication/
+!assets/publication/architecture-flow.png
+!assets/publication/prototype-setup.png
+!assets/publication/prototype-results.png
