@@ -1,9 +1,24 @@
-# Public concept repository: publish only the approved overview and figures.
+# Keep unpublished working materials out of the public repository.
 *
 
 !.gitignore
 !README.md
 !LICENSE
+!package.json
+!package-lock.json
+!tsconfig.json
+!eslint.config.js
+!index.html
+!.env.example
+
+!src/
+!src/**
+
+!server/
+!server/**
+
+!test/
+!test/**
 
 !assets/
 !assets/publication/

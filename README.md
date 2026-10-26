@@ -62,10 +62,11 @@ interaction design.
 
 ## Safety boundaries
 
-- Professional research is limited to candidate-provided links or source
-  categories covered by explicit notice and consent.
-- A discovered page is excluded unless its identity and provenance are
-  verified.
+- Professional research is limited to URLs supplied in the resume or
+  application. Authorization is handled by the upstream application process.
+- The system does not perform broad candidate-name searches.
+- A retrieved page is excluded unless its identity is sufficiently
+  corroborated.
 - Protected, sensitive, personal, and popularity-based information is not
   scored.
 - A missing public profile is not negative evidence.
@@ -73,9 +74,29 @@ interaction design.
 
 ## Current scope
 
-This repository intentionally contains only the public concept overview,
-architecture, and prototype images. No candidate data, credentials, model keys,
-or production implementation is included.
+The local prototype accepts a job description and up to 20 PDF, DOC, or DOCX
+resumes. It extracts candidate-provided professional URLs and retrieves public
+GitHub, LinkedIn, and portfolio evidence through replaceable adapters.
+
+Identity confidence and evidence inclusion are deterministic. No LLM is used
+in the retrieval stage. This remains a prototype, not a production-ready
+employment screening system.
+
+### Run locally
+
+```bash
+npm install
+cp .env.example .env
+# Add a TypeSafe API key to .env to enable scoring.
+npm run dev
+```
+
+Open `http://127.0.0.1:5173`.
+
+The comparison stage uses Jev for typed criterion judgments. Resume evidence
+can contribute up to 90 points; corroborated external evidence is bonus-only
+and capped at 10. Weighting, confidence gates, and routing remain deterministic
+application policy.
 
 ## Attribution
 
